@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comic List</title>
+</head>
+<body>
+    <h1>Comic List</h1>
+    <a href="{% url 'comic_create' %}">Create New Comic</a>
+    <ul>
+        {% for comic in comics %}
+            <li><a href="{% url 'comic_detail' comic.pk %}">{{ comic.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

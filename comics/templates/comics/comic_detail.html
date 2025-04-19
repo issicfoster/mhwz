@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ comic.title }}</title>
+</head>
+<body>
+    <h1>{{ comic.title }}</h1>
+    <p>Author: {{ comic.author }}</p>
+    <p>Description: {{ comic.description }}</p>
+    <a href="{{ comic.file.url }}" download>Download</a>
+    <a href="{% url 'comic_update' comic.pk %}">Update</a>
+    <a href="{% url 'comic_delete' comic.pk %}">Delete</a>
+</body>
+</html>
